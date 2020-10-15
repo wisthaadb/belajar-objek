@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Penginput data buku</p>
+    <p id="hasil"></p>
+    <script>
+        class Buku{
+            constructor (idBuku, judulBuku, pengarang){
+                this.idBuku = idBuku;
+                this.judulBuku = judulBuku;
+                this.pengarang = pengarang;
+            }
+            get getIdBuku(){
+                return this.idBuku;
+            }
+            get getJudulBuku(){
+                return this.judulBuku;
+            }
+            get getPengarang(){
+                return this.pengarang;
+            }
+            tampil = () => {
+                return this.getIdBuku + " "+ this.getJudulBuku+" "+ this.getPengarang;
+            }
+        }
+        
+        objBuku1 = new Buku("001","Mamamiya","Dongelini Paleo");
+        let dataBuku1 =  
+        "id buku = "+ objBuku1.idBuku+ "<br>"+
+        "nama depan = "+ objBuku1.judulBuku+ "<br>"+
+        "Pengarang = "+ objBuku1.pengarang;
+
+        objBuku2 = new Buku("002","Lezatos","Plecer Sambalado");
+        let dataBuku2 =  "<hr>"+
+        "id buku = "+ objBuku2.idBuku+ "<br>"+
+        "nama depan = "+ objBuku2.judulBuku+ "<br>"+
+        "Pengarang = "+ objBuku2.pengarang;
+
+        const hasil = document.getElementById("hasil");
+        hasil.innerHTML = objBuku1.tampil() + " <br>"+ objBuku2.tampil();
+    </script>
+</body>
+</html>
