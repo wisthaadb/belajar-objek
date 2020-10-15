@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="hasil"></p>
+    <script>
+        class Bilangan{
+            constructor(angka1,angka2,angka3,angka4,angka5,angka6){
+                this.angka1 = angka1;
+                this.angka2 = angka2;
+                this.angka3 = angka3;
+                this.angka4 = angka4;
+                this.angka5 = angka5;
+                this.angka6 = angka6;
+            }
+        }
+
+        input = new Bilangan(10,90,66,200,15,999);
+        const a = Object.values(input);//object menjadi array
+        var min = Math.min.apply(null, a);//mencari nilai min
+        var max=  Math.max.apply(null, a);//mencari nilai max
+        const hasil = document.getElementById("hasil");
+        hasil.innerHTML = "Bilangan = "+ a +"<br> Nilai min = "+min+"<br>Nilai max = "+max;
+        console.log(a);
+        console.log(min);
+        console.log(max);
+    </script>
+</body>
+</html>
