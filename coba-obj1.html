@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="hasil"></p>
+    <p id="hasil2"></p>
+    <script>
+        let orang = {
+            namaDepan : "Wistha",
+            namaBelakang : "Adhika",
+            warnaMata : "pink",
+        }
+        orang.kebangsaan = "Indonesia"; //menambah properti
+        delete orang.warnaMata; //menghapus properti
+        const hasil = document.getElementById("hasil");
+//nampilin
+        hasil.innerHTML = "Nama Lengkap : " + orang.namaDepan + " "+ orang.namaBelakang + "<br>Warna Mata : " + orang.warnaMata + "<br>Kebangsaan : "+ orang.kebangsaan;
+// nampilin pake perulangan
+        let pesan = "";
+        let id;
+        for(id in orang){
+            pesan = pesan + orang[id]+ " ";
+            console.log("id = " + id);
+            // console.log("orang = ")
+        }
+        console.log(orang["namaDepan"]);
+        const hasil2 = document.getElementById("hasil2");
+        hasil2.innerHTML = pesan;
+    </script>
+</body>
+</html>

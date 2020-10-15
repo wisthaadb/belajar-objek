@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Nama Lengkap : <span id="namalengkap"></span></p>
+    <p id="dataarray"></p>
+    <script>
+        //cara mendefinisikan object
+        let orang = {
+            namaDepan : "wistha",
+            namaBelakang : "adhika",
+            warnaMata : "pink",
+            namaLengkap : function(){ //membuatfunction
+                return this.namaDepan + " " + this.namaBelakang;
+            }
+        };
+        document.getElementById("namalengkap").innerHTML = orang.namaLengkap();
+
+        //merubah object menjadi array
+        let arrayOrang = Object.values(orang);
+        document.getElementById("dataarray").innerHTML = arrayOrang;
+        console.log(arrayOrang);
+    </script>
+
+</body>
+</html>
