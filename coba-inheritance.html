@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="hasil"></p>
+    <script>
+        class Mobil{
+            constructor(merek){
+                this.namaMobil = merek;
+            }
+            tampilkan(){
+                    return "Merek mobil saya adalah "+ this.namaMobil;
+            }
+        }
+        class Model extends Mobil {
+            constructor(merek, mod){
+                super(merek);
+                this.model = mod;
+            }
+            show(){
+                return this.tampilkan() + ", dengan model " + this.model;
+            }
+        }
+
+        mobilku = new Model("ford","Mustang");
+        document.getElementById("hasil").innerHTML = mobilku.show();
+    </script>
+</body>
+</html>
